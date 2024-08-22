@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Cooper Graves">
+        <meta name="description" content="JavaScript Introduction">
+
+        <title>W6 | JS Intro</title>
+    </head>
+
+    <body>
+        <h1>Week 6 Intro Demo | JavaScript</h1>
+
+        <!--In-Document Javascript Element at the END of HTML content, before the body close-->
+        <script>
+            //single line comment in JS
+            /*multi
+            line comment in JS*/
+
+            //create some variables --> JS requires DECLARATION; EX: 'var'
+            var num1 = 10
+            var num2 = 27
+
+            var sum = num1 + num2
+            
+            //console.log() -- used for development; NOT for a user
+            console.log(sum)
+            console.log(num1, num2, sum)
+            console.log("The sum of ", num1, " + ", num2, " is ", sum)
+            console.log(`The sum of ${num1} + ${num2} is ${sum.toFixed(2)}`)
+
+            //alert() allows for a pop-up in a browser page to display data
+            //alter() -> OUTPUT to user [print()]
+            alert(`Hello World!\nThe sum is $${sum.toFixed(2)}`)
+            //must interact with above alert() before the message below is displayed
+            console.log(`Alert complete.`)
+
+            //prompt() allows for a pop-up with a text box for data input by user
+            //prompt() --> INPUT to user [input()]
+            var name = prompt(`Enter your name: `)
+            console.log(`Prompt complete; name entered: ${name}.`)
+            alert(`Hi there ${name}!`)
+
+            var hours = Number(prompt(`Enter your hours worked: `))
+
+            var gross = hours * 15
+            var taxA = gross * 0.2
+            var net = gross - taxA
+            
+            console.log(`${hours.toFixed(1)} * 15 = $${gross.toFixed(2)}`)
+        </script>
+    </body>
+
+</html>
