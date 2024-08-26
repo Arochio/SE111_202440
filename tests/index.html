@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style id="edited">
+        body {
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-    <x-div sty="color: black;">
-        <input type="text" value="e" x-change="set(sty)"/>
-        <b x-value="{{sty}}"></b>
-    </x-div>
+    <form>
+        <input type="text" id="inputText">
+    </form>
+    <p>this is a text box used for testing stuff in my webpage</p>
+    <script>
+        var inputText = document.querySelector(`#inputText`)
+        inputText.addEventListener("input", () => {
+            document.querySelector(`#edited`).innerHTML = inputText.value;
+        });
+    </script>
 </body>
 </html>
